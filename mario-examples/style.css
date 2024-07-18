@@ -7,6 +7,7 @@ html, body{
   margin: 0;
 }
 
+
 .grass, .sky, .road{
   position: relative;
 }
@@ -62,6 +63,27 @@ html, body{
   animation-direction: reverse;
   animation-timing-function: linear;
 }
+  .cloud{
+    position: absolute;
+    z-index: 1;
+    width: 300px;
+    top:0px;
+    animation: wind 50s linear infinite reverse;
+
+  }
+/* .cloud:nth-child(1){
+  width: 300px;
+  top: 0px;
+  opacity: 0.5;
+} */
+.cloud:nth-child(2){
+  width: 200px;
+  top: 120px;
+  opacity: 0.5;
+  animation: wind 80s linear infinite reverse;
+
+}
+
 
 
 /*// KEYFRAMES //*/
@@ -70,6 +92,10 @@ html, body{
   to{transform: translateX(1000px);}
 } 
 
+@keyframes wind{
+  from{left: -300px;}
+  to{left: 100%;}
+}
 
 
 
